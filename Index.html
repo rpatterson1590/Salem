@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salem Church • Tallapoosa, GA</title>
+  <meta name="description" content="A place where everyone is family. Salem Church in Tallapoosa, GA — Pastor Eric Watts. Pentecostal Church of God (PCG), Georgia." />
+  <meta property="og:title" content="Salem Church • Tallapoosa, GA" />
+  <meta property="og:description" content="A place where everyone is family. Service times, directions, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/og-salem.jpg" />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="Salem.css" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Salem Church",
+    "address": {"@type":"PostalAddress","streetAddress":"344 Salem Church Rd","addressLocality":"Tallapoosa","addressRegion":"GA","postalCode":"30176","addressCountry":"US"},
+    "url": "https://example.com/",
+    "telephone": "(###) ###-####",
+    "foundingDate": "1854",
+    "memberOf": {"@type":"Organization","name":"Pentecostal Church of God – Georgia"},
+    "founder": "—",
+    "geo": {"@type":"GeoCoordinates","latitude": 33.7627, "longitude": -85.3071},
+    "foundingLocation": "Tallapoosa, Georgia"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <div style="font-size:14px;color:#eb0c0c;letter-spacing:.18em;text-transform:uppercase">Salem Church</div>
+          <div style="font-size:18px;font-weight:700">Tallapoosa, Georgia</div>
+        </div>
+      </div>
+      <nav class="row" aria-label="Primary">
+        <a class="btn" href="#visit">Home</a>
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#pastor">Our Pastor</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card shadow">
+          <span class="pill">A place where everyone is Family</span>
+          <h1>Welcome to <span style="background:linear-gradient(135deg,#ee2922,#a60e0e);-webkit-background-clip:text;background-clip:text;color:transparent">Salem Church</span></h1>
+          <img class="churchlogo" src="new.png">
+          <p class="muted">We’re a Pentecostal Church of God (PCG) congregation serving Haralson County and West Georgia — preaching Jesus and making disciples. Join us this Sunday or at an upcoming mid‑week gathering.</p>
+          <div class="row" style="margin-top:14px;gap:14px">
+            <a class="btn" href="https://www.facebook.com/salembaptistchurch2016/" target="_blank" rel="noopener">Facebook</a>
+            <a class="btn" href="https://pcgga.org/" target="_blank" rel="noopener">PCG Georgia</a>
+          </div>
+        </div>
+        <div class="card shadow" id="visit">
+
+          <h2>Find Us/Contact</h2>
+          <div class="row"><strong>Phone:</strong> <span class="muted">(404) 431-8065</span></div>
+          <div class="row"><strong>Email:</strong> <span class="muted">Salemchurch344@gmail.com</span></div>
+          <p class="muted">344 Salem Church Rd, Tallapoosa, GA 30176</p>
+          <iframe class="map" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=344+Salem+Church+Rd,+Tallapoosa,+GA+30176&output=embed"></iframe>
+          <div class="row" style="margin-top:12px">
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=344+Salem+Church+Rd,+Tallapoosa,+GA+30176" target="_blank" rel="noopener">Get Directions</a>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="services" style="padding-top:24px">
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Service Times</h3>
+          <ul class="list" aria-label="Service times">
+            <li><strong>Sunday Morning</strong> — 11:00 AM</li>
+            <li><strong>Sunday School</strong> — 10:00 AM</li>
+            <li><strong>Mid‑Week</strong> — "Currently not available"</li>
+          </ul>
+          
+        </div>
+        <div class="card">
+          <h3>What to Expect</h3>
+          <p class="muted">Christ‑centered worship, preaching from the Bible, and a friendly, family atmosphere. Come as you are — there’s a place for you.</p>
+          <div class="divider"></div>
+          <div class="pcg">
+            
+          
+          </div>
+        </div>
+     <div class="card">
+    <h2>What We Believe</h2>
+          <p class="muted">We affirm the core beliefs and statement of faith of the Pentecostal Church of God (PCG)</p>
+          <a class="btn" href="https://pcgga.org/beliefs/" target="_blank" rel="noopener">PCG Georgia</a>
+          </div>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container row" style="justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>© <span id="year"></span> Salem Church • Tallapoosa, GA</div>
+      <div class="muted">Pentecostal Church of God (PCG) • Georgia District</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
