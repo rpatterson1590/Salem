@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="Salem.css" rel="stylesheet">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,25 +34,70 @@
   </script>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="title">
-          <div style="font-size:14px;color:#eb0c0c;letter-spacing:.18em;text-transform:uppercase">Salem Church</div>
-          <div style="font-size:18px;font-weight:700">Tallapoosa, Georgia</div>
-        </div>
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="title">
+        <div style="font-size:14px;color:#eb0c0c;letter-spacing:.18em;text-transform:uppercase">Salem Church</div>
+        <div style="font-size:18px;font-weight:700">Tallapoosa, Georgia</div>
       </div>
-      <nav class="row" aria-label="Primary">
-        <a class="btn" href="http://salemchurch.church/">Home</a>
-        <a class="btn" href="https://cash.app/$Salemchurch84">Tithe/Offering</a>
-        <a class="btn" href="http://salemchurch.church/links/pastor">Our Pastor</a>
-        <a class="btn" href="https://www.facebook.com/salembaptistchurch2016/">Facebook</a>
-        <a class="btn" href="https://pcgga.org/">PCG Georgia</a>
-        
-      </nav>
     </div>
-  </header>
+
+    <!-- Hamburger button -->
+    <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false">
+      <span class="sr-only">Toggle menu</span>
+      <!-- simple “sandwich” icon -->
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <nav id="primary-nav" class="row" aria-label="Primary">
+      <a class="btn" href="http://salemchurch.church/">Home</a>
+      <a class="btn" href="https://cash.app/$Salemchurch84">Tithe/Offering</a>
+      <a class="btn" href="links/Pastor.html">Our Pastor</a>
+      <a class="btn" href="https://www.facebook.com/salembaptistchurch2016/">Facebook</a>
+      <a class="btn" href="https://www.youtube.com/@salemchurch344">YouTube</a>
+      <a class="btn" href="https://pcgga.org/">PCG Georgia</a>
+    </nav>
+  </div>
+
+  <script>
+  (function () {
+    const wrap = document.querySelector('.container.nav');
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('primary-nav');
+
+    if (!wrap || !btn || !nav) return;
+
+    const toggle = () => {
+      wrap.classList.toggle('open');
+      const isOpen = wrap.classList.contains('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    btn.addEventListener('click', toggle);
+
+    // Close menu after selecting a link (mobile)
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        wrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu on window resize to desktop
+    const mq = window.matchMedia('(min-width: 769px)');
+    mq.addEventListener('change', (e) => {
+      if (e.matches) {
+        wrap.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+</header>
 
   <main>
   
@@ -89,4 +136,5 @@
 </body>
 
 </html>
+
 
