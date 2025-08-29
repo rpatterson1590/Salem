@@ -168,3 +168,72 @@ label{font-weight:600}
     padding: 1rem;
   }
 }
+
+/* Utility for screen-reader-only text */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Header layout */
+.site-header .container.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* so the mobile panel can anchor here */
+}
+
+/* Desktop nav row */
+#primary-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0.5rem;
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* Optional: make links easier to tap on mobile */
+#primary-nav .btn {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* Start hidden, becomes dropdown panel when open */
+  #primary-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; left: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    /* Use your theme vars if available; these fallbacks are neutral */
+    background: var(--card, #ffffff);
+    border-top: 1px solid var(--border, #e5e5e5);
+    z-index: 50;
+  }
+
+  /* When container has .open, show the menu */
+  .container.nav.open #primary-nav { display: flex; }
+
+  /* Full-width, tap-friendly links */
+  #primary-nav .btn {
+    width: 100%;
+    padding: 0.85rem 0.75rem;
+  }
+}
+
