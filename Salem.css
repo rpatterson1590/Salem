@@ -155,4 +155,16 @@ label{font-weight:600}
 .bio-text p {
   margin-bottom: 1.5rem;
   font-size: 20px;
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    padding: 1rem;
+  }
 }
